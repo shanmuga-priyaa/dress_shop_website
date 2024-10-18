@@ -1,0 +1,218 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 85px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transition: background-color 0.4s ease;
+}
+/* Logo Section */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.nav-logo p {
+    color: #171717;
+    font-size: 36px;
+    font-weight: 700;
+    transition: color 0.3s ease, transform 0.5s ease;
+    cursor: pointer;
+}
+/* Logo Hover Animation */
+.nav-logo p:hover {
+    animation: logoHover 0.8s ease-in-out infinite;
+    transform: scale(1.1) rotate(3deg);
+}
+@keyframes logoHover {
+    0%, 100% {
+        color:black;
+    }
+    50% {
+        color:black;
+    }
+}
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    color: #4a4a4a  ;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+/* Menu Items with Custom Animation */
+.nav-menu li {
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Shop Item Animation */
+.nav-menu li:nth-child(1):hover {
+    color:rgb(227, 153, 88);
+    animation: shopBounce 0.8s ease-in-out forwards;
+}
+
+@keyframes shopBounce {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(15px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Men Item Animation */
+.nav-menu li:nth-child(2):hover {
+    color: rgb(227, 153, 88);
+    animation: menWiggle 0.8s ease forwards;
+}
+
+@keyframes menWiggle {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(15px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Women Item Animation */
+.nav-menu li:nth-child(3):hover {
+    color:rgb(227, 153, 88);
+    animation: womenSlide 0.8s ease forwards;
+}
+
+@keyframes womenSlide {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(15px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Kids Item Animation */
+.nav-menu li:nth-child(4):hover {
+    color: rgb(227, 153, 88);
+    animation: kidsRotate 0.8s ease forwards;
+}
+
+@keyframes kidsRotate {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(15px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Single Line Under Each Menu Item */
+/* .nav-menu li::after {
+    content: ''; 
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+.nav-menu li:hover::after {
+    width: 100%;
+} */
+
+/* Login and Cart Section */
+.nav-login-cart {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+/* Change Login Button Color */
+.nav-login-cart button {
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 30px;
+    color:black;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-login-cart button:hover {
+    background-color:rgb(253, 225, 203);
+    color: black;
+    border-color:rgb(218, 215, 213);
+    transform: scale(1.05);
+}
+
+/* Cart Icon and Count */
+.nav-cart-count {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    font-size: 14px;
+    position: relative;
+    top: -25px;
+    left: -45px;
+}
+
+.nav-cart-icon {
+    font-size: 22px;
+    color: #4a4a4a;
+    transition: color 0.3s ease;
+}
+
+.nav-cart-icon:hover {
+    color: black;
+    transform: scale(1.2);
+}
+
+/* Navbar background change on scroll */
+body.scrolled .navbar {
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scroll Detection */
+body {
+    transition: background-color 0.5s ease;
+}
