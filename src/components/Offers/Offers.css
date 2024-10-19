@@ -1,0 +1,83 @@
+.offers-container {
+    width: 100%;
+    height: auto;
+    padding: 100px 0; /* Add padding to prevent overlap */
+    background-color: white; /* Optional: background color to differentiate sections */
+    margin-top: -80px;
+}
+
+/* Offers Section */
+.offers {
+    width: 100%; 
+    height: 100vh;
+    display: flex;
+    margin: 0;
+    padding: 70px 180px;
+    background: linear-gradient(180deg, rgb(253, 225, 203) 0%,white  60%);
+    box-sizing: border-box; /* Ensures padding doesn’t affect width */
+    position: relative;
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+}
+
+.offers-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.offers-left h1 {
+    color: #171717;
+    font-size: 55px;
+    font-weight: 600;
+}
+
+.offers-left p {
+    color: #171717;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.offer-left button {
+    width: 282px;
+    height: 70px;
+    border-radius: 35px;
+    border: none;
+    background: #ff4141;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.offers-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    position: relative; /* Important for controlling the animated position */
+}
+
+.offers-right img {
+    width: 350px; 
+    height: auto;  
+    max-height: 100%;  
+    object-fit: contain;  
+    position: absolute; /* Allows for smooth movement */
+    animation: slideInOut 5s linear infinite; /* Infinite sliding animation */
+}
+
+/* Animation keyframes for continuous sliding */
+@keyframes slideInOut {
+    0% {
+        transform: translateX(80%); /* Start off-screen to the right */
+    }
+    10% {
+        transform: translateX(20%); /* Move to the center */
+    }
+    90% {
+        transform: translateX(5%); /* Stay in the center */
+    }
+}
