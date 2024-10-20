@@ -1,0 +1,66 @@
+.new-collection {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.new-collection h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.collection-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between items */
+}
+
+.item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+    width: 200px; /* Adjust width as needed */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s; /* Transition for the card */
+}
+
+.item:hover {
+    transform: translateY(-5px); /* Lift effect on hover for the card */
+}
+
+.item img {
+    max-width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s; /* Transition for the image */
+}
+
+.item:hover img {
+    transform: scale(1.05); /* Scale effect on hover for the image */
+}
+
+.item h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.item p {
+    font-size: 1em;
+    color: #777;
+}
+
+.item button {
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.item button:hover {
+    background-color: #218838; /* Darker green */
+}
