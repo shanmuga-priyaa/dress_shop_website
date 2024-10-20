@@ -4,63 +4,106 @@
     text-align: center;
 }
 
-.new-collection h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+.new-collection h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
     color: #333;
 }
 
-.collection-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.collection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
     gap: 20px; /* Space between items */
 }
 
 .item {
     border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
+    border-radius: 10px;
+    padding: 10px; /* Reduced padding */
     background-color: #fff;
-    width: 200px; /* Adjust width as needed */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s; /* Transition for the card */
-}
-
-.item:hover {
-    transform: translateY(-5px); /* Lift effect on hover for the card */
+    transition: transform 0.2s;
+    max-width: 300px; /* Adjusted max-width */
+    margin: 0 auto;
+    overflow: hidden; /* Ensure overflow is hidden */
 }
 
 .item img {
-    max-width: 100%;
-    border-radius: 5px;
-    transition: transform 0.3s; /* Transition for the image */
+    width: 100%;          /* Full width of the card */
+    height: 200px;       /* Fixed height */
+    object-fit: cover;   /* Crop and cover the area without distortion */
+    border-radius: 5px;  /* Rounded corners */
+    transition: transform 0.3s; /* Smooth hover effect */
 }
 
-.item:hover img {
-    transform: scale(1.05); /* Scale effect on hover for the image */
+.item:hover {
+    transform: translateY(-5px);
 }
 
 .item h3 {
-    font-size: 1.2em;
-    margin: 10px 0;
+    font-size: 1.1em; /* Slightly reduced font size */
+    margin: 6px 0;
 }
 
 .item p {
-    font-size: 1em;
+    font-size: 0.85em; /* Slightly reduced font size */
+    margin: 4px 0;
     color: #777;
 }
 
+.item-prices {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin: 4px 0;
+}
+
+.item-price-new {
+    color: #374151;
+    font-weight: 600;
+}
+
+.item-price-old {
+    color: #8c8c8c;
+    font-size: 16px; /* Slightly reduced font size */
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
 .item button {
-    background-color: #28a745; /* Green */
+    background-color: #28a745;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 8px 12px; /* Reduced button padding */
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s;
 }
 
 .item button:hover {
-    background-color: #218838; /* Darker green */
+    background-color: #218838;
+}
+
+/* Adjust the grid to display 3-3-2 layout */
+.collection .item:nth-child(7),
+.collection .item:nth-child(8) {
+    grid-column: span 1; /* Ensure last row has 2 items in separate columns */
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .collection {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+
+    .collection .item:nth-child(7),
+    .collection .item:nth-child(8) {
+        grid-column: span 1; /* Keep each item in its own column for last row */
+    }
+}
+
+@media (max-width: 480px) {
+    .collection {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+    }
 }
