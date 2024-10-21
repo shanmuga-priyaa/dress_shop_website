@@ -1,4 +1,5 @@
 /* Navbar Container */
+/* Adjust the navbar height to fit the logo */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -8,20 +9,29 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
-    z-index: 999;
+    z-index: 509;
     transition: background-color 0.4s ease;
+    height: 50px; /* Adjust navbar height to fit the logo */
 }
 
+/* Adjust logo height */
+.nav-logo img {
+    height: 60px; /* Adjust this to match your desired logo size */
+    width: auto;  /* Maintain aspect ratio */
+    max-height: 100%; /* Ensure the logo fits within the navbar */
+}
 /* Logo Section */
 .nav-logo {
     display: flex;
     align-items: center;
     gap: 30px;
+    height:50px;
+    width: auto;
 }
 
 .nav-logo p {
     color: #171717;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
     transition: color 0.3s ease, transform 0.5s ease;
     cursor: pointer;

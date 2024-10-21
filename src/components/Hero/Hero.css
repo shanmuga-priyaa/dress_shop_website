@@ -1,5 +1,5 @@
 .hero {
-   height: 73vh; /* Reduced height */
+   height: 80vh; /* Reduced height */
    background: linear-gradient(130deg, #ffebf0, #f78fb3 60%);
    display: flex;
    align-items: center;
