@@ -41,7 +41,7 @@
 }
 
 .hero-right img {
-   width: 60%; /* Adjusted image width for better fit */
+   width: 80%; /* Adjusted image width for better fit */
    height: auto;
    object-fit: contain;
    transform: scale(1);
