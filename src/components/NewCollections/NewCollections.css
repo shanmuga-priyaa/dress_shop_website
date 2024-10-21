@@ -13,40 +13,40 @@
 .collection {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
-    gap: 20px; /* Space between items */
+    gap: 15px; /* Slightly reduced space between items */
 }
 
 .item {
     border: 1px solid #ccc;
     border-radius: 10px;
-    padding: 10px; /* Reduced padding */
+    padding: 8px; /* Reduced padding */
     background-color: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    max-width: 300px; /* Adjusted max-width */
+    max-width: 250px; /* Reduced card size */
     margin: 0 auto;
     overflow: hidden; /* Ensure overflow is hidden */
 }
 
 .item img {
     width: 100%;          /* Full width of the card */
-    height: 200px;       /* Fixed height */
-    object-fit: cover;   /* Crop and cover the area without distortion */
-    border-radius: 5px;  /* Rounded corners */
+    height: 180px;        /* Fixed height for the card */
+    object-fit: contain;  /* Ensures the full image fits inside the card */
+    border-radius: 5px;   /* Rounded corners */
     transition: transform 0.3s; /* Smooth hover effect */
 }
 
-.item:hover {
-    transform: translateY(-5px);
+/* Hover effect on image only */
+.item img:hover {
+    transform: scale(1.1); /* Zoom in on image hover */
 }
 
 .item h3 {
-    font-size: 1.1em; /* Slightly reduced font size */
+    font-size: 1em; /* Slightly reduced font size */
     margin: 6px 0;
 }
 
 .item p {
-    font-size: 0.85em; /* Slightly reduced font size */
+    font-size: 0.8em; /* Slightly reduced font size */
     margin: 4px 0;
     color: #777;
 }
@@ -65,7 +65,7 @@
 
 .item-price-old {
     color: #8c8c8c;
-    font-size: 16px; /* Slightly reduced font size */
+    font-size: 14px; /* Slightly reduced font size */
     font-weight: 500;
     text-decoration: line-through;
 }
@@ -74,7 +74,7 @@
     background-color: #28a745;
     color: white;
     border: none;
-    padding: 8px 12px; /* Reduced button padding */
+    padding: 6px 10px; /* Reduced button padding */
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s;
