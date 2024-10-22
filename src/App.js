@@ -10,6 +10,7 @@ import Footer from './components/Footer/Footer';
 import men_banner from './components/Assets/banner_mens.jpeg';
 import women_banner from './components/Assets/banner_women.jpeg';
 import kid_banner from './components/Assets/banner_kids.jpeg';
+// import Headers from './components/Navbar/Headers';
 function App() {
   return (
     <div>

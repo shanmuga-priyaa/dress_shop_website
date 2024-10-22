@@ -19,14 +19,16 @@
     height: 60px; /* Adjust this to match your desired logo size */
     width: auto;  /* Maintain aspect ratio */
     max-height: 100%; /* Ensure the logo fits within the navbar */
+    margin-bottom: 20px;
 }
 /* Logo Section */
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     height:50px;
     width: auto;
+    
 }
 
 .nav-logo p {
@@ -82,6 +84,9 @@
     display: flex;
     align-items: center;
     gap: 35px;
+    color: #4a4a4a;
+
+
 }
 
 /* Change Login Button Color */
@@ -90,7 +95,8 @@
     border: 2px solid black;
     border-radius: 30px;
     color: black;
-    font-size: 10px;
+    font-size: 8px;
+    margin-bottom: 11px;
     font-weight: 500;
     background-color: white;
     cursor: pointer;
@@ -124,7 +130,8 @@
     font-size: 22px;
     color: #4a4a4a;
     transition: color 0.3s ease;
-}
+    
+    }
 
 .nav-cart-icon:hover {
     color: black;
