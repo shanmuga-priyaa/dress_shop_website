@@ -2,6 +2,7 @@
     padding: 20px;
     background-color: #f9f9f9;
     text-align: center;
+    
 }
 
 .new-collection h1 {
@@ -15,6 +16,7 @@
     flex-wrap: wrap;
     grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
     gap: 15px; /* Slightly reduced space between items */
+   
 }
 
 .item {
@@ -26,14 +28,16 @@
     max-width: 200px; /* Reduced card size */
     margin: 0 auto;
     overflow: hidden; /* Ensure overflow is hidden */
+   
 }
 
 .item img {
     width: 100%;          /* Full width of the card */
-    height: 180px;        /* Fixed height for the card */
+    height: 150px;        /* Fixed height for the card */
     object-fit: contain;  /* Ensures the full image fits inside the card */
     border-radius: 5px;   /* Rounded corners */
     transition: transform 0.3s; /* Smooth hover effect */
+    margin-bottom: 2px;
 }
 
 /* Hover effect on image only */
