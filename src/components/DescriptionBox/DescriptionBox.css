@@ -1,0 +1,59 @@
+/* Main Container for Description Box */
+.descriptionbox {
+    max-width: 800px; /* Limit the maximum width for better readability */
+    margin: 20px auto; /* Center the box with some margin */
+    padding: 20px; /* Add padding inside the box */
+    background-color: transparent; /* Remove background color for a seamless look */
+    /* Remove the following properties for card effect */
+    /* border: 1px solid #e0e0e0; */
+    /* border-radius: 10px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+/* Navigation Bar for Description and Reviews */
+.descriptionbox-navigator {
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-start; /* Align items to the left */
+    margin-bottom: 15px; /* Space below the navigator */
+}
+
+/* Individual Navigation Button */
+.descriptionbox-nav-box {
+    padding: 10px 15px; /* Padding inside the nav box */
+    font-weight: bold; /* Bold font for emphasis */
+    cursor: pointer; /* Pointer cursor for clickable items */
+    border: 1px solid #007bff; /* Blue border for buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
+    background-color: transparent; /* Transparent background */
+    color: #007bff; /* Blue text color */
+    margin-right: 10px; /* Space between buttons */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Change background and text color on hover */
+.descriptionbox-nav-box:hover {
+    background-color: #007bff; /* Change background color on hover */
+    color: #ffffff; /* Change text color to white */
+}
+
+/* Fade class for inactive reviews tab */
+.fade {
+    color: #aaa; /* Light grey color for inactive text */
+    cursor: not-allowed; /* Indicates that this button is not active */
+    border-color: #ddd; /* Light grey border to differentiate from active buttons */
+    background-color: transparent; /* Keep it transparent for consistency */
+    pointer-events: none; /* Disable pointer events for this element */
+}
+
+/* Description Text Section */
+.descriptionbox-description {
+    margin-top: 15px; /* Space above the description */
+}
+
+/* Paragraph Styles */
+.descriptionbox-description p {
+    font-size: 14px; /* Standard font size */
+    line-height: 1.6; /* Line height for better readability */
+    color: #333; /* Dark text color */
+    margin-bottom: 10px; /* Space between paragraphs */
+}
