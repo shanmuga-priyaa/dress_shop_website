@@ -1,0 +1,72 @@
+/* Main Container for Related Products */
+.relatedproducts {
+    max-width: 1200px; /* Set a maximum width for the container */
+    margin: 20px auto; /* Center the container with some margin */
+    padding: 20px; /* Add padding inside the container */
+    background-color: #ffffff; /* White background for contrast */
+}
+
+/* Heading Style */
+.relatedproducts h1 {
+    font-size: 24px; /* Font size for the heading */
+    font-weight: bold; /* Bold font weight */
+    text-align: center; /* Center the heading */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+/* Horizontal Line */
+.relatedproducts hr {
+    border: 1px solid #e0e0e0; /* Light grey line */
+    margin: 10px 0 20px; /* Space above and below the line */
+}
+
+/* Container for Related Product Items */
+.relatedproducts-item {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: flex-start; /* Align items to the left */
+    gap: 15px; /* Space between each product item */
+    overflow: hidden; /* Prevent overflow and scrolling */
+}
+
+/* Individual Product Item */
+.relatedproducts-item .item {
+    flex: 0 0 auto; /* Prevent item from growing or shrinking */
+    width: 120px; /* Reduced width for each item */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding inside the item */
+    background-color: #f9f9f9; /* Light background color */
+    text-align: center; /* Center text inside the item */
+}
+
+/* Product Image */
+.item img {
+    width: 100%; /* Make the image fill the item */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for the image */
+    transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+/* Scale Image on Hover */
+.item img:hover {
+    transform: scale(1.05); /* Slightly enlarge image on hover */
+}
+
+/* Product Name */
+.item h2 {
+    font-size: 14px; /* Font size for the product name */
+    margin: 10px 0; /* Space above and below the name */
+}
+
+/* Pricing Styles */
+.item .price {
+    font-size: 14px; /* Font size for price */
+    color: #e63946; /* Color for new price */
+}
+
+/* Old Price Style */
+.item .old-price {
+    font-size: 12px; /* Font size for old price */
+    color: #888; /* Light grey color for old price */
+    text-decoration: line-through; /* Strikethrough effect */
+}
