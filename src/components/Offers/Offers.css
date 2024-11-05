@@ -1,22 +1,22 @@
 .offers-container {
     width: 100%;
     height: 120vh;
-    padding: 100px 0; /* Add padding to prevent overlap */
-    background-color: white; /* Optional: background color to differentiate sections */
+    padding: 100px 0;
+    background-color: white;
     margin-top: -80px;
 }
 
 /* Offers Section */
 .offers {
-    width: 100%; 
+    width: 100%;
     height: 100vh;
     display: flex;
     margin: 0;
     padding: 70px 180px;
-    background: linear-gradient(180deg, rgb(253, 225, 203) 0%,white  60%);
-    box-sizing: border-box; /* Ensures padding doesn’t affect width */
+    background: linear-gradient(180deg, rgb(253, 225, 203) 0%, white 60%);
+    box-sizing: border-box;
     position: relative;
-    overflow: hidden; /* Hide overflow to prevent scrollbars */
+    overflow: hidden;
 }
 
 .offers-left {
@@ -28,27 +28,36 @@
 
 .offers-left h1 {
     color: #171717;
-    font-size: 55px;
+    font-size: 70px;
     font-weight: 600;
 }
 
 .offers-left p {
     color: #171717;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
-.offer-left button {
-    width: 282px;
+/* Button Container */
+.offer-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Button Styling */
+.offers-left button {
+    width: 580px !important;
     height: 70px;
-    border-radius: 35px;
+    border-radius: 25px;
     border: none;
-    background: #ff4141;
+    background: rgb(231, 170, 96);
     color: white;
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 300;
     margin-top: 30px;
     cursor: pointer;
+    max-width: 282px;
 }
 
 .offers-right {
@@ -57,27 +66,35 @@
     justify-content: center;
     align-items: center;
     padding-top: 50px;
-    position: relative; /* Important for controlling the animated position */
+    position: relative;
 }
 
+/* Image Styling and Animation */
 .offers-right img {
-    width: 650px; 
-    height: auto;  
-    max-height: 100%;  
-    object-fit: contain;  
-    position: absolute; /* Allows for smooth movement */
-    animation: slideInOut 5s linear infinite; /* Infinite sliding animation */
+    width: 1000px;
+    height: 800px;
+    max-height: 100%;
+    margin-top: -150px;
+    object-fit: contain;
+    position: absolute;
+    animation: slideInOut 8s linear infinite; /* Infinite sliding animation */
 }
 
-/* Animation keyframes for continuous sliding */
+/* Animation keyframes with adjusted path */
 @keyframes slideInOut {
     0% {
-        transform: translateX(80%); /* Start off-screen to the right */
+        transform: translateX(60%); /* Start further off-screen to the right */
     }
-    10% {
-        transform: translateX(20%); /* Move to the center */
+    25% {
+        transform: translateX(-1%); /* Move closer but keep a distance */
     }
-    90% {
-        transform: translateX(5%); /* Stay in the center */
+    50% {
+        transform: translateX(0%); /* Hold at a safe distance from the button */
+    }
+    75% {
+        transform: translateX(1%); /* Continue holding */
+    }
+    100% {
+        transform: translateX(20%); /* Move back off-screen */
     }
 }
